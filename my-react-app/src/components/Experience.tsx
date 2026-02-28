@@ -1,15 +1,15 @@
 export default function Experience() {
   const experiences = [
     {
-      title: 'Senior Software Engineer',
-      company: 'Tech Company',
-      period: '2022 - Present',
+      title: 'Junior Software Engineer(Internship)',
+      company: 'Institute Of Certified Public Accountants Of Uganda',
+      period: '2025 - 2026',
       description: 'Led development of scalable web applications using React and Node.js.'
     },
     {
       title: 'Software Engineer',
-      company: 'Startup Inc',
-      period: '2020 - 2022',
+      company: 'My Personal Projects',
+      period: '2025',
       description: 'Built and maintained full-stack applications with modern technologies.'
     }
   ];

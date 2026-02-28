@@ -1,21 +1,48 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Navigation() {
+type Page = 'home' | 'about' | 'skills' | 'experience' | 'projects' | 'contact';
+
+interface NavigationProps {
+  activePage: Page;
+  onNavigate: (page: Page) => void;
+}
+
+const links: { label: string; page: Page }[] = [
+  { label: 'Home',       page: 'home' },
+  { label: 'About',      page: 'about' },
+  { label: 'Skills',     page: 'skills' },
+  { label: 'Experience', page: 'experience' },
+  { label: 'Projects',   page: 'projects' },
+  { label: 'Contact',    page: 'contact' },
+];
+
+export default function Navigation({ activePage, onNavigate }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleNav = (page: Page) => {
+    onNavigate(page);
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed w-full bg-white shadow-md z-50">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-blue-600">Portfolio</a>
-          
+          <button onClick={() => handleNav('home')} className="text-2xl font-bold text-blue-600">
+            Portfolio
+          </button>
+
           <div className="hidden md:flex space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-blue-600">About</a>
-            <a href="#skills" className="text-gray-700 hover:text-blue-600">Skills</a>
-            <a href="#experience" className="text-gray-700 hover:text-blue-600">Experience</a>
-            <a href="#projects" className="text-gray-700 hover:text-blue-600">Projects</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600">Contact</a>
+            {links.map(({ label, page }) => (
+              <button
+                key={page}
+                onClick={() => handleNav(page)}
+                className={`transition ${activePage === page ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-blue-600'}`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
 
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
@@ -25,11 +52,15 @@ export default function Navigation() {
 
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4">
-            <a href="#about" className="block text-gray-700 hover:text-blue-600">About</a>
-            <a href="#skills" className="block text-gray-700 hover:text-blue-600">Skills</a>
-            <a href="#experience" className="block text-gray-700 hover:text-blue-600">Experience</a>
-            <a href="#projects" className="block text-gray-700 hover:text-blue-600">Projects</a>
-            <a href="#contact" className="block text-gray-700 hover:text-blue-600">Contact</a>
+            {links.map(({ label, page }) => (
+              <button
+                key={page}
+                onClick={() => handleNav(page)}
+                className={`block w-full text-left transition ${activePage === page ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-blue-600'}`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         )}
       </div>
