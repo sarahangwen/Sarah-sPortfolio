@@ -1,6 +1,7 @@
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Download } from 'lucide-react';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import resumePDF from '@/assets/A_Sarah CV.pdf';
 
 const SERVICE_ID  = 'service_zbhi0m8';
 const TEMPLATE_ID = 'template_e597mwl';
@@ -25,28 +26,42 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Get In Touch</h2>
-        <div className="w-24 h-1 bg-blue-600 mx-auto mb-12"></div>
+    <section id="contact" className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] py-24">
+      <div className="absolute top-0 right-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
+
+      <div className="max-w-7xl mx-auto px-8 md:px-16">
+        <h2 className="text-[clamp(4rem,12vw,9rem)] font-black leading-[0.9] tracking-tight mb-12">
+          CONTACT.
+        </h2>
+
+        <div className="w-full h-[3px] bg-[hsl(0,75%,45%)] mb-12" />
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-[hsl(0,0%,95%)]">Contact Information</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <Mail className="w-6 h-6 text-blue-600" />
-                <span className="text-gray-700">angwensarahsunday@gmail.com</span>
+                <Mail className="w-6 h-6 text-[hsl(15,90%,55%)]" />
+                <span className="text-[hsl(0,0%,60%)]">angwensarahsunday@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
-                <Phone className="w-6 h-6 text-blue-600" />
-                <span className="text-gray-700">+256785093196</span>
+                <Phone className="w-6 h-6 text-[hsl(15,90%,55%)]" />
+                <span className="text-[hsl(0,0%,60%)]">+256785093196</span>
               </div>
               <div className="flex items-center gap-4">
-                <MapPin className="w-6 h-6 text-blue-600" />
-                <span className="text-gray-700">Kampala, Uganda</span>
+                <MapPin className="w-6 h-6 text-[hsl(15,90%,55%)]" />
+                <span className="text-[hsl(0,0%,60%)]">Kampala, Uganda</span>
               </div>
             </div>
+
+            <a
+              href={resumePDF}
+              download="Sarah_Angwen_CV.pdf"
+              className="inline-flex items-center gap-2 mt-8 bg-[hsl(15,90%,55%)] text-[hsl(0,0%,8%)] px-6 py-3 rounded-sm hover:bg-[hsl(15,90%,45%)] transition font-semibold"
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
+            </a>
           </div>
 
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
@@ -55,31 +70,31 @@ export default function Contact() {
               name="from_name"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+              className="w-full px-4 py-3 bg-[hsl(0,0%,12%)] border border-[hsl(0,0%,20%)] rounded-sm text-[hsl(0,0%,95%)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
             />
             <input
               type="email"
               name="from_email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+              className="w-full px-4 py-3 bg-[hsl(0,0%,12%)] border border-[hsl(0,0%,20%)] rounded-sm text-[hsl(0,0%,95%)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
             />
             <textarea
               name="message"
               placeholder="Your Message"
               rows={5}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+              className="w-full px-4 py-3 bg-[hsl(0,0%,12%)] border border-[hsl(0,0%,20%)] rounded-sm text-[hsl(0,0%,95%)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
             ></textarea>
 
             {status === 'success' && (
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-green-500">
                 <CheckCircle className="w-5 h-5" />
                 <span>Message sent! I'll get back to you soon.</span>
               </div>
             )}
             {status === 'error' && (
-              <div className="flex items-center gap-2 text-red-600">
+              <div className="flex items-center gap-2 text-red-500">
                 <AlertCircle className="w-5 h-5" />
                 <span>Something went wrong. Please try again.</span>
               </div>
@@ -88,7 +103,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center gap-2 bg-[hsl(15,90%,55%)] text-[hsl(0,0%,8%)] py-3 rounded-sm hover:bg-[hsl(15,90%,45%)] transition disabled:opacity-60 disabled:cursor-not-allowed font-semibold"
             >
               <Send className="w-4 h-4" />
               {status === 'sending' ? 'Sending...' : 'Send Message'}
