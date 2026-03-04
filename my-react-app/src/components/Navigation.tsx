@@ -1,66 +1,37 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-type Page = 'home' | 'about' | 'skills' | 'experience' | 'projects' | 'contact';
-
-interface NavigationProps {
-  activePage: Page;
-  onNavigate: (page: Page) => void;
-}
-
-const links: { label: string; page: Page }[] = [
-  { label: 'Home',       page: 'home' },
-  { label: 'About',      page: 'about' },
-  { label: 'Skills',     page: 'skills' },
-  { label: 'Experience', page: 'experience' },
-  { label: 'Projects',   page: 'projects' },
-  { label: 'Contact',    page: 'contact' },
-];
-
-export default function Navigation({ activePage, onNavigate }: NavigationProps) {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNav = (page: Page) => {
-    onNavigate(page);
-    setIsOpen(false);
-  };
-
   return (
-    <nav className="fixed w-full bg-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4">
+    <nav className="fixed w-full bg-[hsl(0,0%,8%)] border-b border-[hsl(0,0%,15%)] z-50">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 py-4">
         <div className="flex justify-between items-center">
-          <button onClick={() => handleNav('home')} className="text-2xl font-bold text-blue-600">
-            Portfolio
-          </button>
+          <a href="#" className="text-2xl font-bold text-[hsl(15,90%,55%)]">
+            My Portfolio
+          </a>
 
           <div className="hidden md:flex space-x-8">
-            {links.map(({ label, page }) => (
-              <button
-                key={page}
-                onClick={() => handleNav(page)}
-                className={`transition ${activePage === page ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-blue-600'}`}
-              >
-                {label}
-              </button>
-            ))}
+            <a href="#about" className="text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">About</a>
+            <a href="#skills" className="text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Skills</a>
+            <a href="#experience" className="text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Experience</a>
+            <a href="#projects" className="text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Projects</a>
+            <a href="#contact" className="text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Contact</a>
           </div>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[hsl(0,0%,70%)]">
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
 
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4">
-            {links.map(({ label, page }) => (
-              <button
-                key={page}
-                onClick={() => handleNav(page)}
-                className={`block w-full text-left transition ${activePage === page ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-blue-600'}`}
-              >
-                {label}
-              </button>
-            ))}
+            <a href="#about" className="block text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">About</a>
+            <a href="#skills" className="block text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Skills</a>
+            <a href="#experience" className="block text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Experience</a>
+            <a href="#projects" className="block text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Projects</a>
+            <a href="#contact" className="block text-[hsl(0,0%,70%)] hover:text-[hsl(15,90%,55%)] transition">Contact</a>
           </div>
         )}
       </div>
