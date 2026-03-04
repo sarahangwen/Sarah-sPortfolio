@@ -1,42 +1,48 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
-type Page = 'home' | 'about' | 'skills' | 'experience' | 'projects' | 'contact';
-
-interface HeroProps {
-  onNavigate: (page: Page) => void;
-}
-
-export default function Hero({ onNavigate }: HeroProps) {
+export default function Hero() {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          Hi, I'm <span className="text-blue-600">Engineer Sarah Angwen</span>
+    <section className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] min-h-screen flex items-center">
+      <div className="absolute top-0 right-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
+      <div className="absolute bottom-0 left-0 w-2 h-16 bg-[hsl(0,75%,45%)]" />
+
+      <div className="max-w-7xl mx-auto px-8 md:px-16 py-24 w-full">
+        <p className="text-sm tracking-[0.3em] uppercase text-[hsl(15,90%,55%)] mb-6">
+          Welcome
+        </p>
+
+        <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-black leading-[0.95] tracking-tight mb-6">
+          Hello, I'm<br />
+          <span className="text-[hsl(15,90%,55%)]">Ms Sarah Angwen</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-700 mb-8">
+
+        <p className="text-lg md:text-xl font-semibold text-[hsl(0,0%,70%)] mb-4">
           Full Stack Developer | Problem Solver | Tech Enthusiast
         </p>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+
+        <p className="text-sm text-[hsl(0,0%,50%)] max-w-xl leading-relaxed mb-10">
           Building scalable web applications and turning ideas into reality with clean, efficient code.
         </p>
 
-        <div className="flex justify-center gap-4 mb-8">
-          <button onClick={() => onNavigate('contact')} className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+        <div className="w-24 h-[3px] bg-[hsl(0,75%,45%)] mb-10" />
+
+        <div className="flex gap-4 mb-12">
+          <a href="#contact" className="bg-[hsl(15,90%,55%)] text-[hsl(0,0%,5%)] px-8 py-3 rounded-sm font-semibold hover:bg-[hsl(15,90%,45%)] transition-colors">
             Get In Touch
-          </button>
-          <button onClick={() => onNavigate('projects')} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">
+          </a>
+          <a href="#projects" className="border-2 border-[hsl(0,0%,30%)] text-[hsl(0,0%,80%)] px-8 py-3 rounded-sm font-semibold hover:border-[hsl(15,90%,55%)] hover:text-[hsl(15,90%,55%)] transition-colors">
             View Projects
-          </button>
+          </a>
         </div>
 
-        <div className="flex justify-center gap-6">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
+        <div className="flex gap-5">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
             <Github className="w-6 h-6" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
             <Linkedin className="w-6 h-6" />
           </a>
-          <a href="mailto:your.email@example.com" className="text-gray-700 hover:text-blue-600">
+          <a href="mailto:angwensarahsunday@gmail.com" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
             <Mail className="w-6 h-6" />
           </a>
         </div>
