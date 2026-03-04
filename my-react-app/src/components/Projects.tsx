@@ -3,51 +3,57 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with payment integration',
+      title: 'ICPAU Audit Management System',
+      description: 'AI-powered audit management system for Ugandan Small and Medium Practices (SMPs)',
+      tech: ['React', 'TypeScript', 'AI Integration'],
+      github: 'https://github.com/ICPAU/audit-portal.git',
+      demo: '#',
+      period: 'June – December 2025',
+      role: 'Frontend Developer '
+    },
+    {
+      title: 'KGL Management System',
+      description: 'Full-stack management system for Karibu Groceries Ltd',
       tech: ['React', 'Node.js', 'MongoDB'],
-      github: '#',
-      demo: '#'
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management with real-time updates',
-      tech: ['TypeScript', 'Express', 'PostgreSQL'],
-      github: '#',
-      demo: '#'
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Real-time weather data visualization',
-      tech: ['React', 'API Integration', 'Tailwind'],
-      github: '#',
-      demo: '#'
+      github: 'https://github.com/sarahangwen/final_project.git',
+      demo: '#',
+      period: 'February – May 2025',
+      role: 'Full-Stack Developer'
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Projects</h2>
-        <div className="w-24 h-1 bg-blue-600 mx-auto mb-12"></div>
+    <section id="projects" className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] py-24">
+      <div className="absolute top-0 left-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-8 md:px-16">
+        <h2 className="text-[clamp(4rem,12vw,9rem)] font-black leading-[0.9] tracking-tight mb-12">
+          PROJECTS.
+        </h2>
+
+        <div className="w-full h-[3px] bg-[hsl(0,75%,45%)] mb-12" />
+
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+            <div key={index} className="border border-[hsl(0,0%,20%)] rounded-sm p-6 hover:border-[hsl(15,90%,55%)] transition-colors">
+              <div className="mb-3">
+                <h3 className="text-xl font-semibold mb-1 text-[hsl(0,0%,95%)]">{project.title}</h3>
+                <p className="text-xs text-[hsl(15,90%,55%)] font-semibold">{project.role}</p>
+                <p className="text-xs text-[hsl(0,0%,50%)]">{project.period}</p>
+              </div>
+              <p className="text-[hsl(0,0%,60%)] mb-4 text-sm">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map(tech => (
-                  <span key={tech} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                  <span key={tech} className="bg-[hsl(15,90%,55%)] text-[hsl(0,0%,8%)] px-3 py-1 rounded-sm text-xs font-semibold">
                     {tech}
                   </span>
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href={project.github} className="text-gray-700 hover:text-blue-600">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href={project.demo} className="text-gray-700 hover:text-blue-600">
+                <a href={project.demo} className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
                   <ExternalLink className="w-5 h-5" />
                 </a>
               </div>
