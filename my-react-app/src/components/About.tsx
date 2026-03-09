@@ -7,7 +7,7 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto px-8 md:px-16">
         <h2 className="text-[clamp(4rem,12vw,9rem)] font-black leading-[0.9] tracking-tight mb-12">
-          ABOUT.
+          ABOUT ME.
         </h2>
 
         <div className="w-full h-[3px] bg-[hsl(0,75%,45%)] mb-10" />
