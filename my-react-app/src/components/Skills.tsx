@@ -9,8 +9,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] py-24">
-      {/* Orange accent bar top-left */}
+    <section id="skills" className="relative bg-[var(--color-bg)] text-[var(--color-text-primary)] py-24 transition-colors duration-200">
       <div className="absolute top-0 left-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
 
       <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -24,14 +23,14 @@ export default function Skills() {
           {Object.entries(skills).map(([category, items]) => (
             <div
               key={category}
-              className="border border-[hsl(0,0%,20%)] p-8 rounded-sm hover:border-[hsl(15,90%,55%)] transition-colors"
+              className="border border-[var(--color-border)] p-8 rounded-sm hover:border-[hsl(15,90%,55%)] transition-colors"
             >
               <h3 className="text-xl font-bold text-[hsl(15,90%,55%)] mb-6 tracking-wide uppercase">
                 {category}
               </h3>
               <ul className="space-y-3">
                 {items.map(skill => (
-                  <li key={skill} className="text-sm text-[hsl(0,0%,60%)]">
+                  <li key={skill} className="text-sm text-[var(--color-text-muted)]">
                     {skill}
                   </li>
                 ))}

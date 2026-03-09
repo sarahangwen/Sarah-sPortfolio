@@ -23,7 +23,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] py-24">
+    <section id="projects" className="relative bg-[var(--color-bg)] text-[var(--color-text-primary)] py-24 transition-colors duration-200">
       <div className="absolute top-0 left-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
 
       <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -35,13 +35,13 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="border border-[hsl(0,0%,20%)] rounded-sm p-6 hover:border-[hsl(15,90%,55%)] transition-colors">
+            <div key={index} className="border border-[var(--color-border)] rounded-sm p-6 hover:border-[hsl(15,90%,55%)] transition-colors">
               <div className="mb-3">
-                <h3 className="text-xl font-semibold mb-1 text-[hsl(0,0%,95%)]">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1 text-[var(--color-text-primary)]">{project.title}</h3>
                 <p className="text-xs text-[hsl(15,90%,55%)] font-semibold">{project.role}</p>
-                <p className="text-xs text-[hsl(0,0%,50%)]">{project.period}</p>
+                <p className="text-xs text-[var(--color-text-faint)]">{project.period}</p>
               </div>
-              <p className="text-[hsl(0,0%,60%)] mb-4 text-sm">{project.description}</p>
+              <p className="text-[var(--color-text-muted)] mb-4 text-sm">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map(tech => (
                   <span key={tech} className="bg-[hsl(15,90%,55%)] text-[hsl(0,0%,8%)] px-3 py-1 rounded-sm text-xs font-semibold">
@@ -50,10 +50,10 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[var(--color-icon)] hover:text-[hsl(15,90%,55%)] transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href={project.demo} className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
+                <a href={project.demo} className="text-[var(--color-icon)] hover:text-[hsl(15,90%,55%)] transition-colors">
                   <ExternalLink className="w-5 h-5" />
                 </a>
               </div>

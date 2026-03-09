@@ -2,13 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+/* Light mode (default) */
+:root {
+  --color-bg: hsl(0, 0%, 98%);
+  --color-bg-footer: hsl(0, 0%, 93%);
+  --color-bg-surface: hsl(0, 0%, 96%);
+  --color-border-light: hsl(0, 0%, 88%);
+  --color-border: hsl(0, 0%, 83%);
+  --color-border-btn: hsl(0, 0%, 65%);
+  --color-text-primary: hsl(0, 0%, 8%);
+  --color-text-heading: hsl(0, 0%, 12%);
+  --color-text-secondary: hsl(0, 0%, 35%);
+  --color-text-muted: hsl(0, 0%, 42%);
+  --color-text-faint: hsl(0, 0%, 50%);
+  --color-icon: hsl(0, 0%, 52%);
+}
+
+/* Dark mode */
+html.dark {
+  --color-bg: hsl(0, 0%, 8%);
+  --color-bg-footer: hsl(0, 0%, 5%);
+  --color-bg-surface: hsl(0, 0%, 12%);
+  --color-border-light: hsl(0, 0%, 15%);
+  --color-border: hsl(0, 0%, 20%);
+  --color-border-btn: hsl(0, 0%, 30%);
+  --color-text-primary: hsl(0, 0%, 95%);
+  --color-text-heading: hsl(0, 0%, 90%);
+  --color-text-secondary: hsl(0, 0%, 70%);
+  --color-text-muted: hsl(0, 0%, 60%);
+  --color-text-faint: hsl(0, 0%, 50%);
+  --color-icon: hsl(0, 0%, 40%);
+}
+
+html,
+body {
+  overscroll-behavior: none;
   scroll-behavior: smooth;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 1s ease-in;
+  }
+  .animate-page-enter {
+    animation: pageEnter 0.2s ease-out;
   }
 }
 
@@ -21,4 +59,9 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

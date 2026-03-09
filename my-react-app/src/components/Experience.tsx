@@ -15,7 +15,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] py-24">
+    <section id="experience" className="relative bg-[var(--color-bg)] text-[var(--color-text-primary)] py-24 transition-colors duration-200">
       <div className="absolute top-0 right-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
 
       <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -28,10 +28,10 @@ export default function Experience() {
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div key={index} className="border-l-4 border-[hsl(15,90%,55%)] pl-6">
-              <h3 className="text-2xl font-semibold text-[hsl(0,0%,95%)]">{exp.title}</h3>
+              <h3 className="text-2xl font-semibold text-[var(--color-text-primary)]">{exp.title}</h3>
               <p className="text-[hsl(15,90%,55%)] font-medium">{exp.company}</p>
-              <p className="text-[hsl(0,0%,50%)] mb-2">{exp.period}</p>
-              <p className="text-[hsl(0,0%,60%)]">{exp.description}</p>
+              <p className="text-[var(--color-text-faint)] mb-2">{exp.period}</p>
+              <p className="text-[var(--color-text-muted)]">{exp.description}</p>
             </div>
           ))}
         </div>

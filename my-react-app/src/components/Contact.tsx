@@ -26,7 +26,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] py-24">
+    <section id="contact" className="relative bg-[var(--color-bg)] text-[var(--color-text-primary)] py-24 transition-colors duration-200">
       <div className="absolute top-0 right-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
 
       <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -38,19 +38,19 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-[hsl(0,0%,95%)]">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-[var(--color-text-primary)]">Contact Information</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <Mail className="w-6 h-6 text-[hsl(15,90%,55%)]" />
-                <span className="text-[hsl(0,0%,60%)]">angwensarahsunday@gmail.com</span>
+                <span className="text-[var(--color-text-muted)]">angwensarahsunday@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-6 h-6 text-[hsl(15,90%,55%)]" />
-                <span className="text-[hsl(0,0%,60%)]">+256785093196</span>
+                <span className="text-[var(--color-text-muted)]">+256785093196</span>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-6 h-6 text-[hsl(15,90%,55%)]" />
-                <span className="text-[hsl(0,0%,60%)]">Kampala, Uganda</span>
+                <span className="text-[var(--color-text-muted)]">Kampala, Uganda</span>
               </div>
             </div>
 
@@ -70,21 +70,21 @@ export default function Contact() {
               name="from_name"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-3 bg-[hsl(0,0%,12%)] border border-[hsl(0,0%,20%)] rounded-sm text-[hsl(0,0%,95%)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
+              className="w-full px-4 py-3 bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-sm text-[var(--color-text-primary)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
             />
             <input
               type="email"
               name="from_email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-3 bg-[hsl(0,0%,12%)] border border-[hsl(0,0%,20%)] rounded-sm text-[hsl(0,0%,95%)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
+              className="w-full px-4 py-3 bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-sm text-[var(--color-text-primary)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
             />
             <textarea
               name="message"
               placeholder="Your Message"
               rows={5}
               required
-              className="w-full px-4 py-3 bg-[hsl(0,0%,12%)] border border-[hsl(0,0%,20%)] rounded-sm text-[hsl(0,0%,95%)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
+              className="w-full px-4 py-3 bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-sm text-[var(--color-text-primary)] focus:outline-none focus:border-[hsl(15,90%,55%)]"
             ></textarea>
 
             {status === 'success' && (

@@ -3,7 +3,7 @@ import profileImage from '@/assets/sarah2.jpg';
 
 export default function Home() {
   return (
-    <section className="relative bg-[hsl(0,0%,8%)] text-[hsl(0,0%,95%)] min-h-screen flex items-center">
+    <section className="relative bg-[var(--color-bg)] text-[var(--color-text-primary)] min-h-screen flex items-center transition-colors duration-200">
       <div className="absolute top-0 right-0 w-16 h-2 bg-[hsl(15,90%,55%)]" />
       <div className="absolute bottom-0 left-0 w-2 h-16 bg-[hsl(0,75%,45%)]" />
 
@@ -19,11 +19,11 @@ export default function Home() {
               <span className="text-[hsl(15,90%,55%)]">Ms Sarah Angwen</span>
             </h1>
 
-            <p className="text-lg md:text-xl font-semibold text-[hsl(0,0%,70%)] mb-4">
+            <p className="text-lg md:text-xl font-semibold text-[var(--color-text-secondary)] mb-4">
               Full Stack Developer | Problem Solver | Tech Enthusiast
             </p>
 
-            <p className="text-sm text-[hsl(0,0%,50%)] max-w-xl leading-relaxed mb-10">
+            <p className="text-sm text-[var(--color-text-faint)] max-w-xl leading-relaxed mb-10">
               Building scalable web applications and turning ideas into reality with clean, efficient code.
             </p>
 
@@ -33,19 +33,19 @@ export default function Home() {
               <a href="#contact" className="bg-[hsl(15,90%,55%)] text-[hsl(0,0%,5%)] px-8 py-3 rounded-sm font-semibold hover:bg-[hsl(15,90%,45%)] transition-colors">
                 Get In Touch
               </a>
-              <a href="#projects" className="border-2 border-[hsl(0,0%,30%)] text-[hsl(0,0%,80%)] px-8 py-3 rounded-sm font-semibold hover:border-[hsl(15,90%,55%)] hover:text-[hsl(15,90%,55%)] transition-colors">
+              <a href="#projects" className="border-2 border-[var(--color-border-btn)] text-[var(--color-text-secondary)] px-8 py-3 rounded-sm font-semibold hover:border-[hsl(15,90%,55%)] hover:text-[hsl(15,90%,55%)] transition-colors">
                 View Projects
               </a>
             </div>
 
             <div className="flex gap-5">
-              <a href="https://github.com/sarahangwen" target="_blank" rel="noopener noreferrer" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
+              <a href="https://github.com/sarahangwen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-icon)] hover:text-[hsl(15,90%,55%)] transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/sarah-angwen-0594a7223/" target="_blank" rel="noopener noreferrer" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
+              <a href="https://www.linkedin.com/in/sarah-angwen-0594a7223/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-icon)] hover:text-[hsl(15,90%,55%)] transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:angwensarahsunday@gmail.com" className="text-[hsl(0,0%,40%)] hover:text-[hsl(15,90%,55%)] transition-colors">
+              <a href="mailto:angwensarahsunday@gmail.com" className="text-[var(--color-icon)] hover:text-[hsl(15,90%,55%)] transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
