@@ -1,5 +1,4 @@
 import { Code2, Rocket, Users } from 'lucide-react';
-import React from 'react';
 
 export default function About() {
   return (
