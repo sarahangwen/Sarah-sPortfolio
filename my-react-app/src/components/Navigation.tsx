@@ -1,6 +1,6 @@
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useState } from 'react';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../context/useTheme';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
