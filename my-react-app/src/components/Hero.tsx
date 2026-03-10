@@ -13,11 +13,11 @@ export default function Hero() {
 
         <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-black leading-[0.95] tracking-tight mb-6">
           Hello, I'm<br />
-          <span className="text-[hsl(15,90%,55%)]">Ms Sarah Angwen</span>
+          <span className="text-[hsl(15,90%,55%)]">Sarah Angwen</span>
         </h1>
 
         <p className="text-lg md:text-xl font-semibold text-[hsl(0,0%,70%)] mb-4">
-          Full Stack Developer | Problem Solver | Tech Enthusiast
+          Certified Full Stack Developer | Problem Solver | Tech Enthusiast
         </p>
 
         <p className="text-sm text-[hsl(0,0%,50%)] max-w-xl leading-relaxed mb-10">
