@@ -1,11 +1,11 @@
 export default function Skills() {
   const skills = {
-    'Frontend': ['HTML5', 'CSS3', 'React', 'TypeScript', 'Tailwind CSS', 'JavaScript'],
+    'Frontend': ['HTML5', 'CSS3', 'React', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'Vue.js'],
     'Backend': ['Node.js', 'Express.js', 'NestJS'],
-    'Database': ['MongoDB', 'Mongoose', 'PostgreSQL'],
+    'Database': ['MongoDB','PostgreSQL'],
     'Tools & Technologies': ['Git', 'GitHub', 'Trello', 'Figma'],
     'Concepts': ['CRUD Operations', 'RBAC', 'Business Logic', 'Inventory Management'],
-    'Deployment & DevOps': ['Docker', 'GitHub Actions', 'DigitalOcean'],
+    'Deployment & DevOps': ['Docker', 'GitHub Actions',],
   };
 
   return (
