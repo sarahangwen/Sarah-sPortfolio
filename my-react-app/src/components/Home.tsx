@@ -20,7 +20,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl font-semibold text-[var(--color-text-secondary)] mb-4">
-              Certified Full Stack Developer | Problem Solver | Tech Enthusiast
+              Full-Stack Developer | JavaScript, TypeScript, Node.js, React | Building Scalable Web Apps
             </p>
 
             <p className="text-sm text-[var(--color-text-faint)] max-w-xl leading-relaxed mb-10">

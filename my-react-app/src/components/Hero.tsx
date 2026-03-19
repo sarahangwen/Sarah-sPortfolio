@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl font-semibold text-[hsl(0,0%,70%)] mb-4">
-          Certified Full Stack Developer | Problem Solver | Tech Enthusiast
+          Full-Stack Developer | JavaScript, TypeScript, Node.js, React | Building Scalable Web Apps
         </p>
 
         <p className="text-sm text-[hsl(0,0%,50%)] max-w-xl leading-relaxed mb-10">
