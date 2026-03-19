@@ -15,7 +15,7 @@ export default function Home() {
             </p>
 
             <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-black leading-[0.95] tracking-tight mb-6">
-              Hello, I'm<br />
+              Hello,I'm<br />
               <span className="text-[hsl(15,90%,55%)]"> Sarah Angwen</span>
             </h1>
 
