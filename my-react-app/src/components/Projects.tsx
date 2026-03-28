@@ -7,7 +7,7 @@ export default function Projects() {
       description: 'AI-powered audit management system for Ugandan Small and Medium Practices (SMPs)',
       tech: ['React', 'TypeScript', 'AI Integration'],
       github: 'https://github.com/ICPAU/audit-portal.git',
-      demo: '#',
+      demo: 'http://157.245.161.120:3000/',
       period: 'June – December 2025',
       role: 'Frontend Developer '
     },
@@ -16,7 +16,7 @@ export default function Projects() {
       description: 'Full-stack management system for Karibu Groceries Ltd',
       tech: ['React', 'Node.js', 'MongoDB'],
       github: 'https://github.com/sarahangwen/final_project.git',
-      demo: '#',
+      demo: 'https://final-project-eta-umber.vercel.app/',
       period: 'February – May 2025',
       role: 'Full-Stack Developer'
     }
