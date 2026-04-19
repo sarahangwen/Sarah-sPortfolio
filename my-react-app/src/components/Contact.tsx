@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Download } from 'lucide-react';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import resumePDF from '@/assets/Angwen-Sarah CV (2).pdf';
+import resumePDF from '@/assets/sarah-resume.pdf';
 
 const SERVICE_ID  = 'service_zbhi0m8';
 const TEMPLATE_ID = 'template_e597mwl';
