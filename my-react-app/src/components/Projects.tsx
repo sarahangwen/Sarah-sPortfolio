@@ -7,7 +7,6 @@ export default function Projects() {
       description: 'AI-powered audit management system for Ugandan Small and Medium Practices (SMPs)',
       tech: ['React', 'TypeScript', 'AI Integration'],
       github: 'https://github.com/ICPAU/audit-portal.git',
-      demo: 'http://157.245.161.120:3000/',
       period: 'June – December 2025',
       role: 'Frontend Developer '
     },
