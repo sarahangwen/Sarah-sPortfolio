@@ -15,7 +15,7 @@ export default function Projects() {
       description: 'Full-stack management system for Karibu Groceries Ltd',
       tech: ['React', 'Node.js', 'MongoDB'],
       github: 'https://github.com/sarahangwen/final_project.git',
-      demo: 'https://final-project-eta-umber.vercel.app/',
+      demo: 'https://final-project-16-6m3b.onrender.com',
       period: 'February – May 2025',
       role: 'Full-Stack Developer'
     }
